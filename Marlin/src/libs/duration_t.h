@@ -165,7 +165,7 @@ struct duration_t {
     }
     else if (!h) {
       const uint16_t s = uint16_t(this->second() % 60UL);
-      sprintf_P(buffer, PSTR("%02hu'%02hu"), m, s);     // 12'34
+      sprintf_P(buffer, PSTR("%02hu:%02hu"), m, s);     // 12:34 - Changed from ' to :
       return 5;
     }
     else if (h < 100) {
